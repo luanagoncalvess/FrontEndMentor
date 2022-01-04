@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* colors */
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    --light-grey: hsl(0, 0%, 95%);
+    }
+
+/* reset */
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0;
+    }
+
+body, html{
+    height: 100vh;
+    width: 100%;
+    font-size:15px;
+}
+
+.card-container{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    background-color: var(--light-grey);
+    justify-content: center;
+    height: 100%;
+    
+}
+
+.card-cars{
+    display: flex;
+    width: 80%;
+    align-items: center;
+}
+
+.item-card{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    height: 440px;
+    justify-content: space-around;
+}
+
+.item-card:first-child{
+    border-radius: 10px 0 0 10px;
+}
+
+.item-card:last-child{
+    border-radius: 0 10px 10px 0;
+}
+
+.sedans{
+    background-color: var(--bright-orange);
+    color: var(--bright-orange);
+}
+
+.suvs{
+    background-color: var(--dark-cyan);
+    color: var(--dark-cyan);
+}
+
+.luxury{
+    background-color: var(--very-dark-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.title-item-card{
+    color:var(--light-grey);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+.text-item-card{
+    color: var(--white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    padding: 10px 20px 40px 0;
+}
+
+.btn-item-card{
+    background-color: var(--light-grey);
+    width: 65%;
+    border-radius:50px;
+    text-transform: capitalize;
+    font-weight:700;
+    padding: 12px 20px 12px;
+}
+
+.btn-item-card:active, .btn-item-card:hover {
+    color: var(--light-grey);
+    background-color: transparent;
+    border:1px solid var(--light-grey);
+}
+
+.color-sedans{
+    color: var(--bright-orange);
+}
+
+.color-suvs{
+    color: var(--dark-cyan);
+}
+
+.color-luxury{
+    color: var(--very-dark-cyan);
+}
+
+@media (max-width: 1190px)
+{
+    .item-card:first-child{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .item-card:last-child{
+        border-radius: 0 0 15px 15px;
+    }
+
+    .card-cars{
+        flex-direction: column;
+    }
+
+    .card-container{
+        padding: 5rem 0 5rem 0;
+        height: auto;
+    }
+    
+    .text-item-card{
+        padding: 20px 0 10px;
+    }
+
+    .title-item-card{
+        padding-top: 30px;
+    }
+    
+}
